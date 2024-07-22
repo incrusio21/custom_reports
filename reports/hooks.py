@@ -10,8 +10,11 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/reports/css/reports.css"
-# app_include_js = "/assets/reports/js/reports.js"
+# app_include_css = []
+
+app_include_js = [
+    "custom-report.bundle.js"
+]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/reports/css/reports.css"
@@ -159,9 +162,9 @@ app_license = "mit"
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "reports.event.get_events"
-# }
+override_whitelisted_methods = {
+	"frappe.desk.query_report.get_script": "reports.desk.query_report.get_script"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,

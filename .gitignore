@@ -5,3 +5,6 @@
 tags
 node_modules
 __pycache__
+reports/docs/current
+reports/public/dist
+node_modules/
